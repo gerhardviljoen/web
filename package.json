@@ -1,0 +1,26 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepages": "https://gerhardviljoen.github.io/web",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "gitignore": "^0.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerhardviljoen/web.git"
+  },
+  "author": "Gerhard Viljoen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gerhardviljoen/web/issues"
+  },
+  "homepage": "https://github.com/gerhardviljoen/web#readme"
+}
