@@ -9,83 +9,76 @@ const auto = true;
 const intervalTime = 5000;
 let slideInterval;
 
-menu.addEventListener('click', e=>{
+menu.addEventListener('click', e => {
   toggleMenu();
 });
 
-next.addEventListener('click', e=> {
+next.addEventListener('click', e => {
   nextSlide();
   resetInterval();
 });
 
-prev.addEventListener('click', e=> {
+prev.addEventListener('click', e => {
   prevSlide();
   resetInterval();
 })
 
-window.addEventListener("scroll", e=>{
+window.addEventListener("scroll", e => {
   navbarOnscroll();
 });
 
-const navbarOnscroll = ()=> {
-  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
-  {
+const navbarOnscroll = () => {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     navbarMenu.classList.add("scroll");
-  }else{
+  } else {
     navbarMenu.classList.remove("scroll");
   }
 };
 
-const toggleMenu = ()=>{
+const toggleMenu = () => {
 
-  if (navbarMenu.classList.contains("open"))
-  {
+  if (navbarMenu.classList.contains("open")) {
     navbarMenu.classList.remove("open");
-  }
-  else
-  {
+  } else {
     navbarMenu.classList.add("open");
   }
 };
 
-const nextSlide = () =>{
+const nextSlide = () => {
 
   const current = document.querySelector('.currentSlide');
   current.classList.remove('currentSlide');
-    
-  if (current.nextElementSibling.classList.contains('slide'))
-  {
+
+  if (current.nextElementSibling.classList.contains('slide')) {
     current.nextElementSibling.classList.add('currentSlide');
-  }else{
+  } else {
     slides[0].classList.add('currentSlide');
   }
 
-  setTimeout(() =>current.classList.remove('currentSlide'));
+  setTimeout(() => current.classList.remove('currentSlide'));
 };
 
-const prevSlide = () =>{
+const prevSlide = () => {
 
   const current = document.querySelector('.currentSlide');
   current.classList.remove('currentSlide');
 
-  if (current.previousElementSibling)
-  {
+  if (current.previousElementSibling) {
     current.previousElementSibling.classList.add('currentSlide');
-  }else{
+  } else {
     slides[slides.length - 1].classList.add('currentSlide');
   }
 
-  setTimeout(() =>current.classList.remove('currentSlide'));
+  setTimeout(() => current.classList.remove('currentSlide'));
 };
 
 if (auto) {
   slideInterval = setInterval(nextSlide, intervalTime);
 };
 
-const resetInterval = ()=>{
+const resetInterval = () => {
   if (auto) {
     clearInterval(slideInterval);
     slideInterval = setInterval(nextSlide, intervalTime);
   }
 };
-
