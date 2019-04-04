@@ -1,0 +1,756 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+
+body{
+  
+  background-color: #262533;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;  
+  user-select: none; 
+  overflow-x: hidden;  
+}
+
+a{
+  text-decoration: none;
+}
+
+span{
+  color: #FFE600;
+}
+
+ul{
+  list-style: none;
+}
+
+footer
+{
+  background: #fff;
+  margin-top: 100px;/*20*/
+  text-align: center;
+}
+
+footer .footerText
+{
+  padding: 20px;
+}
+
+.contentText
+{
+  border-bottom: 5px solid #FFE600;
+  border-left: 5px solid #FFE600;
+  padding: 10px;
+}
+
+.btn
+{
+  background-color:  rgba(68, 68, 68, 0.4);
+  border:1px solid #fff;
+  border-radius: 2px;  
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  padding: 0.5em;  
+  width: 8em;
+  transition: 0.4s ease-out all;
+}
+
+.btn:hover
+{
+  background-color:  rgba(255, 230, 0, 0.4);  
+}
+
+.btn a
+{
+  color:#fff;
+}
+
+#home
+{  
+  background:url("../img/home.jpg") no-repeat center;
+  background-size: cover;  
+  color: #fff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+#home .content
+{ 
+  background-color: rgba(68, 68, 68, 0.4);
+  margin: auto;
+  text-align: left;
+}
+
+#home .content h1
+{
+  font-size: 4em;
+}
+
+#home .content p
+{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#services
+{
+  background:url("../img/services.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#services .topSection
+{
+  position: relative;
+  height: 360px;
+}
+
+#services .content
+{
+  background-color: #262533;
+  display: flex;  
+  flex-direction: column;
+  /* height: calc(100vh - 360px); */
+  justify-content: center;
+  /* margin: auto; */
+}
+
+#services .content .serviceCardContainer
+{  
+  margin: auto;
+  top: -95px;
+  position: relative;
+  transition: 0.5s ease-out all;
+  width: 1060px;   
+}
+
+#services .content .serviceCardContainer .optionList
+{
+  display: flex;
+  height: 95px;
+  margin:0px;
+  text-align: center;
+}
+
+#services .content .serviceCardContainer .optionList li
+{
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-weight: 500;  
+  line-height: 95px;
+  transition: 0.4s ease-out all;
+  width: 100%;
+}
+
+#services .content .serviceCardContainer .optionList li:hover
+{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#services .content .serviceCardContainer .optionList li.current
+{
+  background-color: #fff;
+  color:gray;
+}
+
+#services .content .serviceCardContainer .serviceContent
+{
+  background-color: #fff;
+  display: flex;
+}
+
+#services .content .serviceContent .serviceImage
+{
+  height: 290px;
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+}
+
+#services .content .serviceContent .serviceImage div
+{
+  background:url("../img/imageOne.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%;  
+}
+
+#services .content .serviceContent .serviceInformation
+{
+  color:gray;
+  margin: auto;
+  padding: 20px 20px;
+  width: 50%;  
+}
+
+#services .content  .thumbnailCardContainer
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+#services .content  .thumbnail
+{
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  width: 325px;
+}
+
+#projects .content
+{
+  margin: 20px;
+}
+
+#projects .contentText
+{
+  color:#fff;  
+  margin-bottom: 50px;
+  margin-left: 40px;
+  width: 400px;
+}
+
+#projects .projectListContainer
+{
+  margin: auto;
+}
+
+#projects .projectListContainer .projectCard
+{
+  background-color: #fff; 
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto;
+  width: 970px;
+  transition: 0.4s ease-out all;
+}
+
+#projects .projectListContainer .projectImage
+{
+  background-size: cover;
+  margin: 10px;
+  height: 225px;
+  overflow: hidden;
+  width: 40%;
+}
+
+#projects .projectOne
+{
+  background: url("../img/projectOne.jpg") no-repeat center;
+}
+
+#projects .projectTwo
+{
+  background: url("../img/projectTwo.jpg") no-repeat center;
+}
+
+#projects .projectThree
+{
+  background: url("../img/projectThree.jpg") no-repeat center;
+}
+
+#projects .projectListContainer .projectDetails
+{
+  background-color: rgba(68, 68, 68, 0.4);
+  color:#fff;
+  font-weight: 500;
+  padding: 5px;
+  margin-top: 190px;
+  transition: 0.4s ease-out all;
+}
+
+#projects .projectListContainer .projectDescription
+{
+  margin: auto;
+  width: 60%;
+  padding: 0px 20px;
+}
+
+#projects .projectListContainer .projectCard:hover .projectDetails
+{
+  background-color:  rgba(255, 230, 0, 0.6);
+  color:#444;
+  margin-top: 167px;
+}
+
+#reviews
+{
+  height: 100vh;
+}
+
+#reviews .content
+{
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+  top: 25%;
+}
+
+#reviews .contentText
+{
+  margin-bottom: 50px;
+  margin-left: 40px;
+  width: 400px;
+}
+  
+#reviews .slider
+{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 360px;
+  margin: 20px auto;
+  width: 660px;
+}
+
+#reviews .slide{
+  
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;  
+  top: 0;
+  transition: opacity 0.4s ease-in-out;
+  width: 100%;
+}
+
+#reviews .slide.currentSlide{
+  opacity: 1;
+}
+
+#reviews .slide .slideContent
+{
+  
+  bottom: 0px;
+  color:#444;
+  left:-660px;
+  opacity: 0;
+  padding: 10px;
+  position: absolute;
+  width: 660px;
+}
+
+#reviews .slide .slideContent h1
+{
+  margin-bottom: 10px;
+}
+
+#reviews .slide .slideContent small
+{
+  font-style: italic;
+}
+
+#reviews .slide.currentSlide .slideContent
+{
+  opacity: 1;
+  transform: translateX(660px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+#reviews .buttons button#next{
+ position: absolute; 
+ top: 50%;
+ right: 15px;
+}
+
+#reviews .buttons button#prev{
+  position: absolute; 
+  top: 50%;
+  left: 15px;
+ }
+
+ #reviews .buttons button 
+ {
+  background-color:transparent;  
+  box-shadow: 0px 0px 11px -5px #444;
+  border:none;
+  border-radius: 50%;  
+  color:#444;
+  cursor: pointer;
+  padding: 13px 15px;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+ }
+
+ #reviews .buttons button:hover
+ {
+  padding: 15px 18px;
+ }
+
+ #reviews .slide .sliderImage{
+  border-radius: 50%;
+  box-shadow: 0px 0px 11px -5px #444;
+  height: 200px;
+  margin: auto;
+  width: 200px;  
+ }
+
+ #reviews .slide .sliderImage:first-child{
+  background: url('../img/profile_icon.png') no-repeat center center/cover;   
+}
+
+#reviews .slide .sliderImage:nth-child(2){
+  background: url('../img/projectTwo.jpg') no-repeat center center/cover;
+}
+
+#reviews .slide .sliderImage:nth-child(3){
+  background: url('../img/projectThree.jpg') no-repeat center center/cover;
+}
+
+#reviews .slide .sliderImage:nth-child(4){
+  background: url('../img/services.jpg') no-repeat center center/cover;
+}
+
+#details .content
+{
+ padding: 20px;
+}
+
+#details .contactUs
+{
+  background-color: #fff;  
+  display: flex;
+  margin: 50px auto;
+  padding: 20px;
+  width: 1000px;
+  transition: 0.4s all;
+}
+
+#details .contentText
+{
+  color:#fff;
+  margin-bottom: 20px;
+  width: 440px;  
+}
+
+#details .contactUs .divContactDetails{
+  
+  margin: auto;
+  margin-left: 20px;
+}
+
+#details .contactUs .contactImage
+{
+  background: url('../img/contactUs.png') no-repeat center center/cover;
+  height: 420px;
+  width: 550px;  
+}
+
+#details .contactUs .contactInformation
+{
+  font-size: 24px;
+  margin: auto;
+}
+
+#details .contactUs .contactInformation i
+{
+  margin: 10px;
+}
+
+/* #details .contactUs .contactInformation:nth-child(2)
+{
+  user-select: text;
+  color:red;
+} */
+#details .aboutUs
+{
+  margin: auto;
+  width: 50%;
+}
+
+#details .aboutUs .aboutText
+{
+  color:#fff;
+}
+
+@media screen and (max-width: 1120px)
+{
+  #services .content .serviceCardContainer
+  { 
+    width: 700px; 
+  }
+
+  #services .content  .thumbnail
+  {
+    width: 250px;
+  }
+
+  #projects .projectListContainer .projectCard
+  {
+    width: 700px;
+  }
+
+  #details .contactUs
+  {
+    width: 750px;
+  }
+}
+
+@media screen and (max-width: 780px)
+{
+  #home .content
+  { 
+    margin: auto 110px;
+    text-align: center;    
+  }
+
+  #home .content h1
+  {
+    font-size: 2.5em;
+  }
+
+  #home .content p
+  {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  #home .btn 
+  {
+    margin: 10px auto;
+  }
+
+  #services .content .serviceCardContainer
+  { 
+    width: 550px; 
+  }
+
+  #projects .projectListContainer .projectCard
+  {
+    width: 550px;
+  }
+
+  #reviews .slider 
+  {
+    width: 450px;
+  }
+
+  #reviews .slide .slideContent
+  {
+    left: -450px;
+    width: 450px;
+  }
+
+  #reviews .slide.currentSlide .slideContent
+  {
+    transform: translateX(450px);
+  }
+
+  #details .contactUs
+  {
+   flex-direction: column;
+   width: 440px;
+  }
+
+  #details .contactUs .contactImage
+  {
+    margin: auto;
+    height: 350px;
+    width: 400px;
+  }
+
+  #details .contactUs .divContactDetails
+  {
+    margin: auto;
+  }
+  
+}
+
+@media screen and (max-width: 600px)
+{
+  #services .content .serviceCardContainer .optionList
+  {
+    margin: 0px 5px;
+  }
+  #services .content .serviceCardContainer
+  { 
+    width: 100%; 
+  }
+
+  #services .content .thumbnailCardContainer
+  { 
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  #services .content .thumbnail 
+  {
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  #projects .contentText
+  {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  #projects .projectListContainer .projectCard
+  {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #projects .projectListContainer .projectImage
+  {
+    margin: auto;
+    width: 100%;
+  }
+  
+  #projects .projectListContainer .projectDescription
+  {
+    padding: 20px;
+    width: 100%;
+  }
+
+  #reviews .contentText 
+  {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  #reviews .slider 
+  {
+    width: 400px;
+  }
+
+  #reviews .slide .sliderImage
+  {
+    height: 150px;
+    width: 150px;  
+  }
+
+  #reviews .slide .slideContent
+  {
+    left: -400px;
+    width: 400px;
+  }
+
+  #reviews .slide.currentSlide .slideContent
+  {
+    transform: translateX(400px);
+  }
+
+  #reviews .buttons button#next
+  {
+    top: 20%;
+  }
+   
+  #reviews .buttons button#prev
+  {
+    top: 20%;
+  }
+  
+  #details .contactUs
+  {
+    width: 380px;
+  }
+
+  #details .contactUs .contactImage
+  {
+    height: 300px;
+    width: 340px;
+  }
+
+  #details .contactUs .contactInformation
+  {
+    font-size: 16px;
+  }
+
+  #details .aboutUs
+  {
+    margin: auto;
+    width: 100%;
+  }
+  
+  footer .footerText
+  {
+    padding: 10px;
+  } 
+}
+
+@media screen and (max-width: 480px)
+{
+  #home .content
+  { 
+    margin: auto 10px;
+    text-align: center;    
+  }
+
+  #home .content h1
+  {
+    font-size: 1.5em;
+  }
+
+  #home .content p
+  {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  #services .content .serviceContent
+  { 
+    flex-direction: column;
+  }
+
+  #services .content .serviceContent .serviceImage,
+  #services .content .serviceContent .serviceInformation
+  {
+    width: 100%;
+  }
+
+  #reviews .slider 
+  {
+    width: 100%;
+  }
+
+  #reviews .slide .sliderImage
+  {
+    height: 120px;
+    width: 120px;  
+  }
+
+  #reviews .slide .slideContent
+  {
+    left: 0px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #reviews .slide.currentSlide .slideContent
+  {
+    transform: translateX(0);
+  }
+
+  #reviews .buttons button#next
+  {
+    top: 30%;
+  }
+   
+   #reviews .buttons button#prev
+  {
+    top: 30%;
+  }
+  
+  #details .contentText
+  {
+    width: 100%;
+  }
+
+  #details .contactUs
+  {
+    width: 100%;
+  }
+
+  #details .contactUs .contactImage
+  {
+    width: 100%;
+  }
+
+
+}

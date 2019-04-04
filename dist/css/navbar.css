@@ -1,0 +1,166 @@
+header
+{
+  background-color: rgba(68, 68, 68, 0.4);
+  height: 100px;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: fixed;
+  transition: 0.5s ease-in-out all;
+  top: 0;
+  width: 100%; 
+  z-index:2;
+}
+
+header .btn-navbar
+{
+  display: none;
+}
+
+header .nabvar-menu  .navbarDetails
+{
+  border-bottom: 1px solid #fff;
+  display: flex;
+  height: 30px;
+}
+
+header .nabvar-menu .detailItem 
+{
+  color: #fff;
+  font-size: 12px;
+  margin-right: 20px;  
+}
+
+header .nabvar-menu .menu-list
+{
+  overflow: hidden;
+}
+
+header .nabvar-menu .menuItems
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+header .nabvar-menu ul li
+{
+  margin: 18px 30px;
+}
+
+header .nabvar-menu .listItem
+{
+  color:#fff;  
+  transition: 0.3s ease-in-out color; 
+}
+
+header .nabvar-menu .listItem.current
+{
+  color:#FFE600;
+}
+
+header .nabvar-menu .listItem:hover
+{
+  color:#FFE600;
+}
+
+header.scroll
+{
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 6px #000000;
+  top: -40px;
+}
+
+header.scroll .nabvar-menu .detailItem 
+{
+  color:#262533; 
+}
+
+header.scroll .nabvar-menu .listItem
+{
+  color:#262533; 
+}
+
+header.scroll .nabvar-menu .listItem:hover
+{
+  color:#FFE600;
+}
+
+@media screen and (max-width: 780px)
+{
+  header
+  {
+    height: 60px;
+    transition: 0.5s ease-in-out all;
+  }
+
+  header.open
+  {
+    height: 310px;
+  }
+
+  header .btn-navbar
+  {
+    cursor: pointer;
+    display: block;
+    float: right;
+    position: relative;
+    top: 10px;
+  }
+
+  header .btn-navbar .nav-btnLine
+  {
+    background: rgb(255, 255, 255);
+    height: 3px;
+    width: 28px;
+    transform: rotate(180deg);
+    transition: 0.5s ease-in-out all;    
+  }
+
+  header .btn-navbar .nav-btnLine:nth-child(2)
+  {
+    opacity: 1;
+    margin: 5px 0px;   
+  }
+
+  header .nabvar-menu .navbarDetails 
+  {
+    display: inline-block;
+    border-bottom: none;
+  }
+
+  header .nabvar-menu .menuItems
+  {
+    flex-direction: column;
+  }
+
+  header .nabvar-menu ul li
+  {
+    margin: 10px 0px;
+  }
+
+  header.open .btn-navbar .nav-btnLine:nth-child(1)
+  {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  header.open .btn-navbar .nav-btnLine:nth-child(2)
+  {
+    opacity: 0;
+  }
+
+  header.open .btn-navbar .nav-btnLine:nth-child(3)
+  {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }  
+
+  header.scroll
+  {
+    top: 0px;
+  }
+  
+  header.scroll .btn-navbar .nav-btnLine
+  {
+    background:#262533;
+  }
+}
