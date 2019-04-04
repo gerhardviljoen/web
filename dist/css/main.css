@@ -201,6 +201,18 @@ footer .footerText
   width: 325px;
 }
 
+#services .content .serviceIcon
+{
+  margin: auto;
+  width: 32px;
+}
+
+#services .content  .thumbnail i
+{
+  color:#FFE600;
+  margin: auto;
+}
+
 #projects .content
 {
   margin: 20px;
@@ -308,8 +320,8 @@ footer .footerText
   width: 660px;
 }
 
-#reviews .slide{
-  
+#reviews .slide
+{  
   height: 100%;
   left: 0;
   opacity: 0;
@@ -324,8 +336,7 @@ footer .footerText
 }
 
 #reviews .slide .slideContent
-{
-  
+{  
   bottom: 0px;
   color:#444;
   left:-660px;
@@ -452,11 +463,6 @@ footer .footerText
   margin: 10px;
 }
 
-/* #details .contactUs .contactInformation:nth-child(2)
-{
-  user-select: text;
-  color:red;
-} */
 #details .aboutUs
 {
   margin: auto;
